@@ -4,8 +4,9 @@ import Layout from '@/components/layout/Layout';
 import familyDiningImage from '@/assets/family-dining.jpg';
 import barImage from '@/assets/bar-section.jpg';
 import partyHallImage from '@/assets/party-hall.jpg';
-import foodImage from '@/assets/food-spread.jpg';
+import foodImage1 from '@/assets/food-spread.jpg';
 import heroImage from '@/assets/hero-restaurant.jpg';
+import { HarmCategory } from 'firebase/vertexai';
 
 const galleryCategories = [
   { id: 'all', name: 'All' },
@@ -13,22 +14,19 @@ const galleryCategories = [
   { id: 'dining', name: 'Family Dining' },
   { id: 'bar', name: 'Bar' },
   { id: 'party', name: 'Party Hall' },
+  { id: 'memories', name: 'Memories' ,}
 ];
 
 const galleryImages = [
-  { src: foodImage, alt: 'Signature Dishes', category: 'food' },
-  { src: familyDiningImage, alt: 'Family Dining Area', category: 'dining' },
-  { src: barImage, alt: 'Premium Bar Section', category: 'bar' },
-  { src: partyHallImage, alt: 'Elegant Party Hall', category: 'party' },
-  { src: heroImage, alt: 'Restaurant Ambience', category: 'dining' },
-  { src: foodImage, alt: 'Traditional Thali', category: 'food' },
-  { src: barImage, alt: 'Bar Counter', category: 'bar' },
-  { src: partyHallImage, alt: 'Celebration Setup', category: 'party' },
-  { src: familyDiningImage, alt: 'Cozy Seating', category: 'dining' },
-  { src: heroImage, alt: 'Golden Hour Dining', category: 'dining' },
-  { src: foodImage, alt: 'Chef Special Biryani', category: 'food' },
-  { src: partyHallImage, alt: 'Event Decoration', category: 'party' },
+  { src: foodImage1, alt: "Signature Dishes", category: "food" },
+
+  { src: partyHallImage, alt: "spacious party hall", category: "party" },
+
+  { src: barImage, alt: "Bar Counter", category: "bar" },
+
+  { src: familyDiningImage, alt: "Cozy Seating", category: "dining" },
 ];
+
 
 const GalleryPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
